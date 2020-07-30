@@ -1,0 +1,23 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: service-user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///mp?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: 123456
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#rocketmq
+rocketmq:
+  name-server: 49.235.203.222:9876
